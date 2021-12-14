@@ -5,9 +5,10 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "format-prettier": "prettier --write .",
-    "format-eslint": "eslint --fix",
-    "prepare ": "husky install"
+    "format": "prettier --write .",
+    "lint": "eslint ./src --ext .vue,.js,.ts",
+    "lint-fix": "eslint --fix ./src --ext .vue,.js,.ts",
+    "prepare": "husky install"
   },
   "dependencies": {
     "ant-design-vue": "^3.0.0-alpha.14",
@@ -23,7 +24,7 @@
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.2.0",
-    "husky": "^7.0.4",
+    "husky": "^7.0.0",
     "less": "^4.1.2",
     "less-loader": "^10.2.0",
     "lint-staged": "^12.1.2",
@@ -34,12 +35,7 @@
     "vite-plugin-importer": "^0.2.5",
     "vue-tsc": "^0.29.8"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
-    "*.{js,css,json,md,ts,vue}": "eslint --fix"
+    "*.{vue,js,ts}": "eslint --fix"
   }
 }

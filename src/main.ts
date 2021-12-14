@@ -1,10 +1,8 @@
-import { createApp } from 'vue';
-import App from './App.vue';
+import { createApp } from "vue";
+import App from "./App.vue";
 
-const test =
-  'adklfjskljnsakfhkasdjfhaskldhfklsdahfkljashgggggggjfkdlsjf'.toString();
-
-var a = 1;
+const b = 2;
+console.log(b);
 
 const app = createApp(App);
-app.mount('#app');
+app.mount("#app");
